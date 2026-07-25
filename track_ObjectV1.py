@@ -33,13 +33,13 @@ SMOOTHING_ALPHA = 0.2
 TARGET_HOLD_TIME = 1.0
 
 # Change either value to -1.0 if that servo moves away from the target.
-PAN_DIRECTION = 1.0
-TILT_DIRECTION = 1.0
+PAN_DIRECTION = -1.0
+TILT_DIRECTION = -1.0
 
 # This HSV range is yellow/green-yellow, suitable for an initial tennis-ball
 # or brightly colored target test. It is not a blue range.
-LOWER_TARGET_COLOR = np.array([90, 80, 70], dtype=np.uint8)
-UPPER_TARGET_COLOR = np.array([130, 255, 255], dtype=np.uint8)
+LOWER_TARGET_COLOR = np.array([100, 120, 80], dtype=np.uint8)
+UPPER_TARGET_COLOR = np.array([125, 255, 255], dtype=np.uint8)
 
 NOISE_KERNEL = np.ones((5, 5), dtype=np.uint8)
 
