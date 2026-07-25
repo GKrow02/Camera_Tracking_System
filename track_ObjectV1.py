@@ -25,11 +25,11 @@ DEAD_ZONE = 25
 MINIMUM_AREA = 2000.0
 
 # Proportional gain. The controller output is treated as degrees/second.
-KP = 0.03
-MAX_SERVO_SPEED = 40.0
+KP = 0.12
+MAX_SERVO_SPEED = 60.0
 MAXIMUM_DT = 0.10
 
-SMOOTHING_ALPHA = 0.2
+SMOOTHING_ALPHA = 0.35
 TARGET_HOLD_TIME = 1.0
 
 # Change either value to -1.0 if that servo moves away from the target.
