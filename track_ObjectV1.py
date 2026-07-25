@@ -38,8 +38,8 @@ TILT_DIRECTION = 1.0
 
 # This HSV range is yellow/green-yellow, suitable for an initial tennis-ball
 # or brightly colored target test. It is not a blue range.
-LOWER_TARGET_COLOR = np.array([20, 80, 120], dtype=np.uint8)
-UPPER_TARGET_COLOR = np.array([40, 255, 255], dtype=np.uint8)
+LOWER_TARGET_COLOR = np.array([90, 80, 70], dtype=np.uint8)
+UPPER_TARGET_COLOR = np.array([130, 255, 255], dtype=np.uint8)
 
 NOISE_KERNEL = np.ones((5, 5), dtype=np.uint8)
 
