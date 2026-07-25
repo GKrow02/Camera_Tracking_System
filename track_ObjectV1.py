@@ -33,7 +33,7 @@ SMOOTHING_ALPHA = 0.2
 TARGET_HOLD_TIME = 1.0
 
 # Change either value to -1.0 if that servo moves away from the target.
-PAN_DIRECTION = 1.0
+PAN_DIRECTION = -1.0
 TILT_DIRECTION = 1.0
 
 # This HSV range is yellow/green-yellow, suitable for an initial tennis-ball
