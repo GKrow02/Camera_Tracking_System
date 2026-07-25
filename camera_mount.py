@@ -10,12 +10,12 @@ class MotorController:
         self,
         pan_channel: int = 1,
         tilt_channel: int = 0,
-        pan_min_angle: float = 0,
-        pan_max_angle: float = 180,
-        tilt_min_angle: float = 0,
+        pan_min_angle: float = -360,
+        pan_max_angle: float = 360,
+        tilt_min_angle: float = -180,
         tilt_max_angle: float = 180,
-        start_pan_angle: float = 90.0,
-        start_tilt_angle: float = 90.0,
+        start_pan_angle: float = 0,
+        start_tilt_angle: float = 0,
         i2c_address: int = 0x40,
     ) -> None:
         if pan_min_angle >= pan_max_angle:
