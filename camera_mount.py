@@ -29,8 +29,8 @@ class MotorController:
         self.tilt_max_angle = float(tilt_max_angle)
 
         self.driver = ServoKit(channels=16, address=i2c_address)
-        self.pan_servo = self.driver.servo[pan_channel]
-        self.tilt_servo = self.driver.servo[tilt_channel]
+        self.pan_servo = self.driver.servo[1]
+        self.tilt_servo = self.driver.servo[0]
 
         # Leave the default pulse-width calibration until the exact servo
         # model is known and its safe mechanical range has been tested.
