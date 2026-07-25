@@ -22,7 +22,7 @@ SHOW_WINDOWS = True
 # ============================================================
 
 DEAD_ZONE = 60
-MINIMUM_AREA = 500.0
+MINIMUM_AREA = 2000.0
 
 # Proportional gain. The controller output is treated as degrees/second.
 KP = 0.03
@@ -325,6 +325,7 @@ def main() -> None:
 
         while True:
             frame = camera.capture_array("main")
+            frame = cv2.rotate(frame, cv2.ROTATE_180)
 
             if frame is None:
                 print("The camera frame could not be read.")
