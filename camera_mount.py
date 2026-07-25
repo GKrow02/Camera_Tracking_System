@@ -8,12 +8,12 @@ class MotorController:
 
     def __init__(
         self,
-        pan_channel: int = 0,
-        tilt_channel: int = 1,
-        pan_min_angle: float = 10.0,
-        pan_max_angle: float = 170.0,
-        tilt_min_angle: float = 20.0,
-        tilt_max_angle: float = 160.0,
+        pan_channel: int = 1,
+        tilt_channel: int = 0,
+        pan_min_angle: float = 0,
+        pan_max_angle: float = 180,
+        tilt_min_angle: float = 0,
+        tilt_max_angle: float = 180,
         start_pan_angle: float = 90.0,
         start_tilt_angle: float = 90.0,
         i2c_address: int = 0x40,
@@ -29,8 +29,8 @@ class MotorController:
         self.tilt_max_angle = float(tilt_max_angle)
 
         self.driver = ServoKit(channels=16, address=i2c_address)
-        self.pan_servo = self.driver.servo[1]
-        self.tilt_servo = self.driver.servo[0]
+        self.pan_servo = self.driver.servo[pan_channel]
+        self.tilt_servo = self.driver.servo[tilt_channel]
 
         # Leave the default pulse-width calibration until the exact servo
         # model is known and its safe mechanical range has been tested.
