@@ -22,7 +22,7 @@ SHOW_WINDOWS = True
 # ============================================================
 
 DEAD_ZONE = 25
-MINIMUM_AREA = 2000.0
+MINIMUM_AREA = 1000.0
 
 # Proportional gain. The controller output is treated as degrees/second.
 KP = 0.12
